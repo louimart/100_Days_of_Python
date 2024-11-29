@@ -28,9 +28,9 @@ continue_operation = True
 print(art.logo)
 while continue_operation:
     if not use_previous_result:
-        first_number = int(input("Please enter a first number\n"))
+        first_number = float(input("Please enter a first number\n"))
         operator = input("Please enter an operator: '+', '-', '*', or '/'\n")
-        second_number = int(input("Please enter a second number\n"))
+        second_number = float(input("Please enter a second number\n"))
         result = operation[operator](first_number, second_number)
         print(f"{first_number} {operator} {second_number} = {result}")
         use_result = input("continue with previous result? 'y' or 'n'\n")
@@ -46,7 +46,7 @@ while continue_operation:
                 continue_operation = False
     else:
         operator = input("Please enter an operator: '+', '-', '*', or '/'\n")
-        second_number = int(input("Please enter a second number\n"))
+        second_number = float(input("Please enter a second number\n"))
         result = operation[operator](first_number, second_number)
         print(f"{first_number} {operator} {second_number} = {result}")
         use_result = input("Continue calculation with previous result? 'y' or 'n'\n")
